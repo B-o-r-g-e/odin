@@ -41,9 +41,18 @@ function displayMyLibrary() {
 
         eachBook.appendChild(deleteBtn)
 
+        const currentBookId = book.id
+        const indexToRemove = myLibrary.findIndex(
+            book => book.id === currentBookId
+        )
+
         deleteBtn.addEventListener('click', () => {
 
-
+            if (indexToRemove === currentBookId) {
+                myLibrary.splice(indexToRemove, 1)
+            }
+            console.log(currentBookId)
+            console.log(myLibrary)
 
             // let index = book.title
             // if (index) {
@@ -53,6 +62,16 @@ function displayMyLibrary() {
             // console.log(index)
             // console.log(myLibrary)
         })
+        
+        // function removeObjectByDataAttribute(dataAttributeValue) {
+        //     const indexToRemove = myLibrary.findIndex(
+        //         book => book.id === dataAttributeValue
+        //     )
+        //     const currentBookId = book.id
+        //     if (indexToRemove === currentBookId) {
+        //         myLibrary.splice(indexToRemove, 1)
+        //     }
+        // }
 
         // deleteBook()
     })
