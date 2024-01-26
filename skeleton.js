@@ -39,8 +39,10 @@ function displayMyLibrary() {
 
         eachBook.appendChild(deleteBtn)
 
+        // deleteBtn.
+
         deleteBtn.addEventListener('click', () => {
-            myLibrary.splice(book, 1)
+            // myLibrary.splice(book, 1)
             console.log(myLibrary)
         })
 
@@ -94,10 +96,6 @@ function addModalForm() {
             let deleteBtn = document.createElement('button')
             deleteBtn.className = 'btns';
             deleteBtn.textContent = 'Delete'
-
-            deleteBtn.addEventListener('click', () => {
-
-            })
         })
 
         addNewBookDialog.close()
