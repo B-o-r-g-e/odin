@@ -20,7 +20,9 @@ function addBookToLibrary(title, author, pages, read) {
 /* add the created object info() function to
 * a variable, so it can be displayed as a text content */
 function displayMyLibrary() {
-    myLibrary.forEach((book) => {
+    myLibrary.forEach((book, index) => {
+        book.id = `data-${index + 1}`
+
         let eachBook = document.createElement('div')
         eachBook.className = 'each-book'
         eachBook.innerHTML = `
@@ -39,11 +41,17 @@ function displayMyLibrary() {
 
         eachBook.appendChild(deleteBtn)
 
-        // deleteBtn.
-
         deleteBtn.addEventListener('click', () => {
-            // myLibrary.splice(book, 1)
-            console.log(myLibrary)
+
+
+
+            // let index = book.title
+            // if (index) {
+            //     myLibrary.splice(index, 1)
+            // }
+            // // myLibrary.splice(book, 1)
+            // console.log(index)
+            // console.log(myLibrary)
         })
 
         // deleteBook()
