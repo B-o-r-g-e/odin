@@ -30,7 +30,6 @@ function displayMyLibrary() {
                 <p class="author"><span class="head">Author:</span> ${book.author}</p>
                 <p class="pages"><span class="head">Pages:</span> ${book.pages}</p>
                 <p class="read"><span class="head">Read:</span> ${book.read}</p>
-<!--                <button class="btn btns delete">Delete</button>-->
         `;
         bookContainer.appendChild(eachBook)
 
@@ -48,11 +47,13 @@ function displayMyLibrary() {
 
         deleteBtn.addEventListener('click', () => {
 
-            if (indexToRemove === currentBookId) {
+            if (currentBookId) {
                 myLibrary.splice(indexToRemove, 1)
+                console.log(currentBookId)
+                console.log(book)
+                console.log(myLibrary)
             }
-            console.log(currentBookId)
-            console.log(myLibrary)
+
 
             // let index = book.title
             // if (index) {
@@ -119,7 +120,7 @@ function addModalForm() {
 
         myLibrary.push(toObject)
 
-        myLibrary.forEach(obj => {
+        myLibrary.forEach(() => {
             let deleteBtn = document.createElement('button')
             deleteBtn.className = 'btns';
             deleteBtn.textContent = 'Delete'
@@ -146,7 +147,7 @@ function addModalForm() {
 addBookToLibrary('Joy', 'Joyce', 20, 'not read')
 addBookToLibrary('God', 'James', 20, 'read')
 addBookToLibrary('Cruise', 'Lance', 10, 'not read')
-// addBookToLibrary('Joy', 'Joyce', 20, 'not read')
+addBookToLibrary('Joy', 'Joyce', 20, 'not read')
 // addBookToLibrary('God', 'James', 20, 'read')
 // addBookToLibrary('Cruise', 'Lance', 10, 'not read')
 // addBookToLibrary('Joy', 'Joyce', 20, 'not read')
