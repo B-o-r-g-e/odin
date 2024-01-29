@@ -133,16 +133,6 @@ function addModalForm() {
     }
 }
 
-//delete book
-// function deleteBook(each) {
-//     const btns = document.querySelectorAll('.btns')
-//
-//     btns.forEach((btn) => {
-//         btn.addEventListener('click', (each) => {
-//             myLibrary.splice()
-//         })
-//     })
-// }
 
 addBookToLibrary('Joy', 'Joyce', 20, 'not read')
 addBookToLibrary('God', 'James', 20, 'read')
