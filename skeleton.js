@@ -137,7 +137,7 @@ function addModalForm() {
 addBookToLibrary('Joy', 'Joyce', 20, 'not read')
 addBookToLibrary('God', 'James', 20, 'read')
 addBookToLibrary('Cruise', 'Lance', 10, 'not read')
-addBookToLibrary('Joy', 'Joyce', 20, 'not read')
+// addBookToLibrary('Joy', 'Joyce', 20, 'not read')
 // addBookToLibrary('God', 'James', 20, 'read')
 // addBookToLibrary('Cruise', 'Lance', 10, 'not read')
 // addBookToLibrary('Joy', 'Joyce', 20, 'not read')
