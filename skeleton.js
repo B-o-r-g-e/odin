@@ -49,35 +49,14 @@ function displayMyLibrary() {
 
             if (currentBookId) {
                 myLibrary.splice(indexToRemove, 1)
+                eachBook.remove()
+
                 console.log(currentBookId)
                 console.log(book)
                 console.log(myLibrary)
             }
-
-
-            // let index = book.title
-            // if (index) {
-            //     myLibrary.splice(index, 1)
-            // }
-            // // myLibrary.splice(book, 1)
-            // console.log(index)
-            // console.log(myLibrary)
         })
-        
-        // function removeObjectByDataAttribute(dataAttributeValue) {
-        //     const indexToRemove = myLibrary.findIndex(
-        //         book => book.id === dataAttributeValue
-        //     )
-        //     const currentBookId = book.id
-        //     if (indexToRemove === currentBookId) {
-        //         myLibrary.splice(indexToRemove, 1)
-        //     }
-        // }
-
-        // deleteBook()
     })
-
-
 }
 
 //function for dialog modal
@@ -118,18 +97,23 @@ function addModalForm() {
 
         bookContainer.appendChild(eachBook)
 
+        let deleteBtn = document.createElement('button')
+        deleteBtn.className = 'btn';
+        deleteBtn.textContent = 'Delete'
+
+        eachBook.appendChild(deleteBtn)
+
+        // const currentBookId = book.id
+        // const indexToRemove = myLibrary.findIndex(
+        //     book => book.id === currentBookId
+        // )
+
         myLibrary.push(toObject)
 
-        myLibrary.forEach(() => {
-            let deleteBtn = document.createElement('button')
-            deleteBtn.className = 'btns';
-            deleteBtn.textContent = 'Delete'
-        })
+
 
         addNewBookDialog.close()
         console.log(toObject)
-
-        // deleteBook()
     }
 }
 
