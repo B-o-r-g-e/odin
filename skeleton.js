@@ -52,8 +52,6 @@ function displayMyLibrary() {
                 eachBook.remove()
 
                 console.log(currentBookId)
-                console.log(book)
-                console.log(myLibrary)
             }
         })
     })
@@ -125,12 +123,7 @@ function addModalForm() {
                 })
             }
         })
-
-
-
         addNewBookDialog.close()
-        // console.log(toObject)
-        // console.log(myLibrary)
     }
 }
 
