@@ -50,8 +50,6 @@ function displayMyLibrary() {
             if (currentBookId) {
                 myLibrary.splice(indexToRemove, 1)
                 eachBook.remove()
-
-                console.log(currentBookId)
             }
         })
     })
@@ -115,7 +113,6 @@ function addModalForm() {
                 )
 
                 deleteBtn.addEventListener('click', () => {
-
                     if (currentBookId) {
                         myLibrary.splice(indexToRemove, 1)
                         eachBook.remove()
