@@ -23,9 +23,20 @@
 //
 // innerFn()
 
-function createGreeting(greeting = "") {
-    const myGreet = greeting.toUpperCase();
-    return function(name) {
-        return `${myGreet} ${name}`;
-    };
+// function createGreeting(greeting = "") {
+//     const myGreet = greeting.toUpperCase();
+//     return function(name) {
+//         return `${myGreet} ${name}`;
+//     };
+// }
+
+function createGame(gameName){
+    let score = 0;
+    return function win(){
+        score ++;
+        return `Your name ${gameName} score is ${score}`
+    }
 }
+const hockeyGame = createGame('Hockey');
+
+hockeyGame()
