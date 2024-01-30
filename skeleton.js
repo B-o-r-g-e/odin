@@ -103,17 +103,34 @@ function addModalForm() {
 
         eachBook.appendChild(deleteBtn)
 
-        // const currentBookId = book.id
-        // const indexToRemove = myLibrary.findIndex(
-        //     book => book.id === currentBookId
-        // )
+
 
         myLibrary.push(toObject)
+
+        myLibrary.forEach((book, index) => {
+            if (!book.id) {
+                book.id = `data-${index + 1}`
+
+                const currentBookId = book.id
+                const indexToRemove = myLibrary.findIndex(
+                    book => book.id === currentBookId
+                )
+
+                deleteBtn.addEventListener('click', () => {
+
+                    if (currentBookId) {
+                        myLibrary.splice(indexToRemove, 1)
+                        eachBook.remove()
+                    }
+                })
+            }
+        })
 
 
 
         addNewBookDialog.close()
-        console.log(toObject)
+        // console.log(toObject)
+        // console.log(myLibrary)
     }
 }
 
