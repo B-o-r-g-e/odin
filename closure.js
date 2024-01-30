@@ -5,4 +5,7 @@ function outer(){
         console.log(innerVar);
         console.log(outerVar);
     }
+    inner()
 }
+
+outer()
